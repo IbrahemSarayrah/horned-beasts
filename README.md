@@ -6,7 +6,7 @@
 ### Number and name of feature: 1 Display images
 
 > * Estimate of time needed to complete: 20min
-> * Start time: 2:50pm
+> * Start time: 2:50
 > * Finish time: 3:10
 > * Actual time needed to complete:20min
 
