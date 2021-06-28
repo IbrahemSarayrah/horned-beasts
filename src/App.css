@@ -38,14 +38,7 @@
 }
 
 .img {
-width: 300px;
 height: 300px;
-}
-
-.imgDiv{
-  display:inline-block;
-  text-align: center;
-  padding: 15px;
 }
 
 footer{
@@ -57,4 +50,9 @@ footer{
 
 h1{
   text-align: center;
+}
+
+.row {
+  margin-left:auto;
+  max-width: 100%;
 }
