@@ -16,12 +16,25 @@ class App extends React.Component {
     this.state={
       beastData: beastData,
       show: false,
+      beastClicked: {}
     }
   }
 
-handleModal =()=>{
+handleModal =(title)=>{
+  let beastClicked = beastData.find(data => {
+    if (data.title === title) {
+      return data;
+    }
+  })
   this.setState({
-    show : !this.state.show,
+    show : true,
+    beastClicked: beastClicked
+  })
+}
+
+handleClose = ()=>{
+  this.setState({
+    show : false
   })
 }
   render() {
@@ -31,7 +44,7 @@ handleModal =()=>{
         <Row md={1} >
           <Col>
             <Main beastData ={this.state.beastData} handleModal={this.handleModal} />
-            <SelectedBeast  handleClose={this.handleModal} show={this.state.show}/>
+            <SelectedBeast beastClicked={this.state.beastClicked} handleClose={this.handleClose} show={this.state.show}/>
           </Col>
         </Row>
         <Footer />
