@@ -23,3 +23,10 @@
 > * Start time: 4
 > * Finish time: 5
 > * Actual time needed to complete: 1 hour
+
+### Number and name of feature: 4 Display a Modal
+
+> * Estimate of time needed to complete: 4 hour
+> * Start time: 1
+> * Finish time: 6
+> * Actual time needed to complete: 5 hour
