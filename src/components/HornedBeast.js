@@ -20,7 +20,7 @@ class HornedBeast extends React.Component {
 
     render() {
         return (
-            <Card style={{ width: '18rem', margin: '20px', textAlign: 'center' }}>
+            <Card style={{ width: '18rem', margin: '20px', textAlign: 'center'}}>
                 <Card.Img variant="top"
                     src={this.props.image_url}
                     alt={this.props.title}
@@ -30,7 +30,7 @@ class HornedBeast extends React.Component {
                 <Card.Body style={{ color: 'white', backgroundColor: '#053742' }}>
                     <Card.Title >{this.props.title}</Card.Title>
                     <Card.Text >
-                        {this.props.description}
+                        Number of Horns: {this.props.horns}
                     </Card.Text>
                     <Button onClick={this.increaseLike} variant="primary">Like  ❤️ {this.state.numberOfLike}</Button>
                 </Card.Body>
