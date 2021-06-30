@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import SelectedBeast from './SelectedBeast'
 class HornedBeast extends React.Component {
 
     constructor(props) {
@@ -16,7 +15,7 @@ class HornedBeast extends React.Component {
         })
     }
     handleModal = () => {
-        this.props.showSelectedBeast();
+        this.props.showSelectedBeast(this.props.title);
     }
 
     render() {
@@ -26,6 +25,7 @@ class HornedBeast extends React.Component {
                     src={this.props.image_url}
                     alt={this.props.title}
                     className='img'
+                    onClick={this.handleModal}
                 />
                 <Card.Body style={{ color: 'white', backgroundColor: '#053742' }}>
                     <Card.Title >{this.props.title}</Card.Title>
@@ -33,9 +33,7 @@ class HornedBeast extends React.Component {
                         {this.props.description}
                     </Card.Text>
                     <Button onClick={this.increaseLike} variant="primary">Like  ❤️ {this.state.numberOfLike}</Button>
-                    <Button style={{ margin: '20px' }} onClick={this.handleModal}>More Details</Button>
                 </Card.Body>
-                <SelectedBeast />
             </Card>
         )
     }
